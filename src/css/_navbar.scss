@@ -1,0 +1,133 @@
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+  background: $clr-white;
+  box-shadow: $light-shadow;
+}
+.nav-center {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  transition: $transition;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+.logo {
+  height: 40px;
+}
+
+/* links */
+.projects {
+  padding-top: 0.25rem;
+}
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: $spacing;
+  display: block;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 0.5rem 1rem;
+  transition: $transition;
+}
+.links a:hover {
+  background: $clr-primary-8;
+  color: $clr-primary-5;
+  padding-left: 1.5rem;
+}
+#corona-update {
+  display: flex;
+  align-items: center;
+}
+.red-dot {
+  width: 8px;
+  height: 8px;
+  background-color: $clr-main-red;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: $transition;
+}
+.show-links {
+  height: 17rem;
+}
+/* nav icons */
+.social-icons {
+  display: flex;
+  width: 7.66rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-icon {
+  color: $clr-black;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.user {
+  color: $clr-black;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.social-icons a:hover {
+  color: $clr-primary-7;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    width: 80%;
+    align-items: center;
+    padding: 0;
+  }
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-icons {
+    display: flex;
+  }
+  /* links */
+  .links {
+    height: auto;
+    display: flex;
+    margin-left: 6.25rem;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 1rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  /* nav icons */
+  .social-icons {
+    width: 6.66rem;
+  }
+}
