@@ -103,7 +103,8 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: $clr-grey-5;
+  color: $clr-black;
+  font-family: 'poppins';
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -134,3 +135,4 @@ MODULES
 ========
 */
 @import './navbar';
+@import './trending';
