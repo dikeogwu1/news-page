@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { BsBoxArrowUp, BsBookmark } from 'react-icons/bs'
+import { BsBoxArrowUp, BsBookmark, BsHeart } from 'react-icons/bs'
 import { FaListUl, FaHeart } from 'react-icons/fa'
+import { AiFillStar } from 'react-icons/ai'
 import axios from 'axios'
 
 const Breaking = () => {
@@ -102,9 +103,12 @@ const Breaking = () => {
                     </div>
 
                     <div className='todays-text'>
-                      <h3>{`${
-                        title.length < 60 ? title : title.substring(0, 60)
-                      }`}</h3>
+                      <h3>
+                        {`${
+                          title.length < 60 ? title : title.substring(0, 60)
+                        }`}
+                        ..
+                      </h3>
                       <p className='t-text-desc'>
                         {`${
                           description < 100
@@ -166,6 +170,75 @@ const Breaking = () => {
       <div className='view-btn-wrapper-lg'>
         <button className='view-more'>View More</button>
       </div>
+
+      {/* editor's pick */}
+      <section className='editors-pick-container'>
+        <h3 className='editors-pick-title'>
+          Editor’s Picks{' '}
+          <span>
+            {' '}
+            <AiFillStar />
+          </span>
+        </h3>
+        <div className='editors-pick-wrapper'>
+          <article className='editors-news '>
+            <div className='e-news-img-wrapper'>
+              <img src='./editorsPick1.svg' alt='news' />
+              <div className='corona-logo'>Corona</div>
+              <div className='e-news-icons'>
+                <div>
+                  <BsHeart className='t-n-icon love' />
+                  <span className='t-news-like'>28</span>
+                </div>
+                <div>
+                  <BsBoxArrowUp className='t-n-icon' />
+                  <span className='t-news-like'>72</span>
+                </div>
+                <div>
+                  <BsBookmark className='t-n-icon' />
+                </div>
+              </div>
+            </div>
+            <div className='e-news-text'>
+              <h4>
+                Serological surveys are being conducted <br /> to test for
+                coronavirus antibodies. How
+                <br /> useful are they?
+              </h4>
+              <p>
+                The authorities are hoping to find that a substantial proportion
+                of the population has already been
+                <br /> infected with the virus – and so is immune.
+              </p>
+            </div>
+          </article>
+          <article className='editors-news'>
+            <div className='e-news-img-wrapper'>
+              <img src='./editorsPick2.svg' alt='news' />
+            </div>
+            {/* editors pick text */}
+            <div className='e-news-text'>
+              <h4>
+                Making a mark in Asia: East Bengal’s 2003
+                <br /> Asean Cup win – a defining moment for
+                <br /> Indian club football
+              </h4>
+              <p>
+                Beating some of the finest teams from South Asia, East Bengal
+                became the first Indian club to win an officially recognised
+                Asian football tournament.
+              </p>
+            </div>
+          </article>
+        </div>
+        {/* scroll bar */}
+        <div className='scroll-bar-wrapper'>
+          <div className='bar'></div>
+          <div className='bar active-bar'></div>
+          <div className='bar'></div>
+          <div className='bar'></div>
+        </div>
+      </section>
     </section>
   )
 }

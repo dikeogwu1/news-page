@@ -278,10 +278,104 @@ input::placeholder {
   display: block;
   padding: 0 1.25rem;
 }
-@media screen and (min-width: 1100px) {
-  #breaking {
-    width: 75%;
+
+// editor's pick
+.editors-pick-container {
+  margin-top: 5rem;
+  position: relative;
+  padding-left: 1.25rem;
+}
+.editors-news {
+  position: relative;
+  width: 70%;
+  &:nth-child(2) {
+    margin-left: 1.25rem;
   }
+}
+.editors-pick-wrapper {
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+}
+.e-news-img-wrapper {
+  position: relative;
+  width: 70vw;
+  height: 8rem;
+  z-index: 1;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.editors-pick-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.corona-logo {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  background-color: $clr-main-red;
+  color: $clr-white;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  font-size: 0.5rem;
+  padding: 0 3px;
+}
+.e-news-icons {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  justify-content: center;
+  display: none;
+  & div {
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    color: $clr-white;
+    opacity: 0.5;
+    & .t-news-like {
+      font-size: 0.5rem;
+    }
+  }
+}
+// editors pick text
+.e-news-text {
+  width: 90%;
+  margin-left: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  & h4 {
+    letter-spacing: 0;
+    line-height: 1.1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  & p {
+    font-size: 0.625rem;
+    line-height: 163.41%;
+    display: none;
+  }
+}
+// scroll bar
+.scroll-bar-wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 6.937rem;
+  justify-content: space-between;
+  margin-top: 0.625rem;
+}
+.bar {
+  width: 1rem;
+  height: 0.25rem;
+  background-color: $clr-main-red;
+  opacity: 0.2;
+}
+.active-bar {
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
   .breaking-topic-wrapper {
     height: 4rem;
     padding: 0.75rem 0;
@@ -315,9 +409,55 @@ input::placeholder {
   #sm-location-news-box {
     display: none;
   }
+
+  // editors pick
+  .editors-pick-container {
+    padding-left: 0;
+  }
+  .editors-pick-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .editors-news {
+    display: flex;
+  }
+  .e-news-img-wrapper {
+    width: 12rem;
+  }
+  .corona-logo {
+    top: 10px;
+    left: 8rem;
+    position: absolute;
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .e-news-icons {
+    display: flex;
+  }
+
+  // editors pick text
+  .e-news-text {
+    width: 18.25rem;
+    position: relative;
+    z-index: 1;
+    & p {
+      display: block;
+    }
+    & h4 {
+      line-height: 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
+  #breaking {
+    width: 98%;
+  }
   // live news section
   .news-container {
     display: flex;
@@ -394,5 +534,11 @@ input::placeholder {
   // latest story
   .latest-story {
     width: 40.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #breaking {
+    width: 75%;
   }
 }

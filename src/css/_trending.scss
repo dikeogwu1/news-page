@@ -62,9 +62,9 @@ TRENDING NEWS
   display: none;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
   #trending {
-    width: 75%;
+    width: 98%;
     padding: 0;
   }
   .trending-sm {
@@ -91,5 +91,10 @@ TRENDING NEWS
   .trending-letters {
     width: 34.37rem;
     margin-left: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #trending {
+    width: 75%;
   }
 }
