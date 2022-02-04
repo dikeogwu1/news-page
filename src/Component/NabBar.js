@@ -7,14 +7,14 @@ const NabBar = () => {
   const [status, setStatus] = useState(true)
   return (
     <nav>
-      <div class='nav-center'>
+      <div className='nav-center'>
         {/* nav header */}
-        <div class='nav-header'>
-          <img src='./logo.svg' class='logo' alt='logo' />
+        <div className='nav-header'>
+          <img src='./logo.svg' className='logo' alt='logo' />
           {/* links */}
           <ul className={`${status ? 'links' : 'links show-links'}`}>
             <li>
-              <a href='index.html' id='corona-update'>
+              <a href='#' id='corona-update'>
                 <div className='red-dot'></div>
                 <div>corona updates</div>
               </a>
@@ -35,7 +35,7 @@ const NabBar = () => {
               <a href='#'>travel</a>
             </li>
             <li>
-              <a href='contact.html'>
+              <a href='#'>
                 <span>podcasts </span>
                 &nbsp;
                 <span>
@@ -47,14 +47,14 @@ const NabBar = () => {
         </div>
 
         {/* nav icons */}
-        <ul class='social-icons'>
+        <ul className='social-icons'>
           <li>
             <FaRegUser className='user' />
           </li>
           <li>
             <AiOutlineSearch className='nav-icon' />
           </li>
-          <button class='nav-toggle' onClick={() => setStatus(!status)}>
+          <button className='nav-toggle' onClick={() => setStatus(!status)}>
             <BsTextRight className='nav-icon' />
           </button>
         </ul>

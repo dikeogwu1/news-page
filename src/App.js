@@ -4,11 +4,11 @@ import NavBar from './Component/NabBar'
 import Trending from './Component/Trending'
 function App() {
   return (
-    <body className='App'>
+    <div className='App'>
       <NavBar />
       <Trending />
       <Breaking />
-    </body>
+    </div>
   )
 }
 

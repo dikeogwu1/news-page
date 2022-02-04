@@ -35,8 +35,8 @@ const Trending = () => {
               </div>
             </div>
             <h4 className='trending-tittle'>
-              Cake meme reflects coronavirus absurdity in a world where nothing
-              is what it seems
+              Cake meme reflects coronavirus absurdity in a world where <br />
+              nothing is what it seems
             </h4>
           </article>
 
