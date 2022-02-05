@@ -7,6 +7,9 @@ import axios from 'axios'
 const Breaking = () => {
   const [news, setNews] = useState([
     { author: '', content: '', description: '', urlToImage: '', title: '' },
+    { author: '', content: '', description: '', urlToImage: '', title: '' },
+    { author: '', content: '', description: '', urlToImage: '', title: '' },
+    { author: '', content: '', description: '', urlToImage: '', title: '' },
   ])
   const [isLoading, setIsLoading] = useState(true)
 
