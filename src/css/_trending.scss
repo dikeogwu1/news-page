@@ -30,11 +30,12 @@ TRENDING NEWS
     font-family: 'poppins';
     width: fit-content;
   }
-  .trending-icons {
-    font-size: 1rem;
-    .arrow-up {
-      margin: 0 1.25rem;
-    }
+  .trending-icon {
+    width: 1.125rem;
+    height: 1rem;
+  }
+  .arrow-up {
+    margin: 0 1.25rem;
   }
 }
 
@@ -93,7 +94,14 @@ TRENDING NEWS
     margin-left: 2.5rem;
   }
 }
-@media screen and (min-width: 1200px) {
+
+@media screen and (min-width: 1280px) {
+  #trending {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
   #trending {
     width: 75%;
   }

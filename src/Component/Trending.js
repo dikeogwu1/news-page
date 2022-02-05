@@ -9,9 +9,9 @@ const Trending = () => {
         <div className='topic-wrapper'>
           <h4 className='topic'>trending</h4>
           <div className='trending-icons'>
-            <BsHeart />
-            <BsBoxArrowUp className='arrow-up' />
-            <BsBookmark />
+            <BsHeart className='trending-icon' />
+            <BsBoxArrowUp className='trending-icon arrow-up' />
+            <BsBookmark className='trending-icon' />
           </div>
         </div>
         <h4 className='trending-tittle'>

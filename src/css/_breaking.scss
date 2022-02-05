@@ -537,7 +537,12 @@ input::placeholder {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  #breaking {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1300px) {
   #breaking {
     width: 75%;
   }
