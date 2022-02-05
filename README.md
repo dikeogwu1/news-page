@@ -1,16 +1,16 @@
 # description
 
-This is a news page that receives data from the [https://newsapi.org/](NEWS API) and displays it under breaking news.\
+This is a news page that receives data from the [https://newsapi.org/] (NEWS API) and displays it under breaking news.\
  the news changes every one hour, so visit the page every one hour for latest news.
 
 # details
 
-The app is developed with (REACT JS), styled with (SASS) and fetch it's data with (AXIOS),
+The app is developed with (REACT JS), styled with (SASS) and fetch it's data with (AXIOS).
 
 ### `npm start`
 
 To run the app in the development mode.\
-Clone this repo and open it up in your code editor, open the integrated terminal and hit (npm start).
+Clone this repo and open it up in your code editor, open the integrated terminal and hit (npm start).\
 Open [http://localhost:3000](REACT DEV PAGE) to view it in your browser.
 
 The page will reload when you make changes.\
