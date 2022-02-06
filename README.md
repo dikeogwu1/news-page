@@ -10,8 +10,8 @@ The app is developed with (REACT JS), styled with (SASS) and fetch it's data wit
 ### `npm start`
 
 To run the app in the development mode.\
-Clone this repo and open it up in your code editor, open the integrated terminal and hit (npm start).\
-Open [http://localhost:3000](REACT DEV PAGE) to view it in your browser.
+Fork this repo and clone it from your github down to your local machine then open it up in your code editor, open the integrated terminal in your editor and hit (npm start).
+When it starts running open [http://localhost:3000] (REACT DEV PAGE) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
