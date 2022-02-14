@@ -10,8 +10,20 @@ The app is developed with (REACT JS), styled with (SASS) and fetch it's data wit
 ### `npm start`
 
 To run the app in the development mode.\
-Fork this repo and clone it from your github down to your local machine then open it up in your code editor, open the integrated terminal in your editor and hit (npm start).\
-When it starts running open [http://localhost:3000] (REACT DEV PAGE) to view it in your browser.
+Fork this repo and clone it down to your local computer open it up in your code editor, open the integrated terminal and hit (npm start).\
+Open [http://localhost:3000](REACT DEV PAGE) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+#### React Router Fix
+
+(Fix)[https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc]
+
+#### CRA Fix
+
+```
+
+"build": "CI= react-scripts build",
+
+```
