@@ -6,21 +6,27 @@ import axios from 'axios'
 
 const Breaking = () => {
   const [news, setNews] = useState([
-    { author: '', content: '', description: '', urlToImage: '', title: '' },
-    { author: '', content: '', description: '', urlToImage: '', title: '' },
-    { author: '', content: '', description: '', urlToImage: '', title: '' },
-    { author: '', content: '', description: '', urlToImage: '', title: '' },
+    {
+      ClusterId: '',
+      News: [{ Source: '', Title: '', Description: '', Image: '' }],
+    },
   ])
   const [isLoading, setIsLoading] = useState(true)
 
-  // Api Call
+  // Api Call with Axios
   const fetch_new = async () => {
     setIsLoading(true)
     try {
-      const data = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_KEY}`
-      )
-      setNews(data.data.articles)
+      const data = await axios({
+        method: 'GET',
+        url: 'https://news67.p.rapidapi.com/v2/trending',
+        params: { languages: 'en' },
+        headers: {
+          'x-rapidapi-host': 'news67.p.rapidapi.com',
+          'x-rapidapi-key': `${process.env.REACT_APP_NEWS_KEY} `,
+        },
+      })
+      setNews(data.data.news)
       setIsLoading(false)
     } catch (error) {
       console.log(error)
@@ -28,7 +34,7 @@ const Breaking = () => {
     }
   }
 
-  // Call to "News Api"
+  // Call on "initial-render"
   useEffect(() => {
     fetch_new()
   }, [])
@@ -92,31 +98,31 @@ const Breaking = () => {
 
           {/* ATTENTION !!!!!!! News from "news api" */}
           <div className='api-new-wrapper'>
-            {news.slice(0, 4).map((item, index) => {
-              const { author, description, urlToImage, title } = item
+            {news.slice(0, 4).map((item) => {
+              const { Title, Image, Description, Source } = item.News[0]
               if (isLoading) {
-                return <h2 key={index}>Loading...</h2>
+                return <h2 key={item.ClusterId}>Loading...</h2>
               }
               return (
                 // Todays News
-                <article key={index} className='todays-wrapper'>
+                <article key={item.ClusterId} className='todays-wrapper'>
                   <div className='todays-news'>
                     <div className='t-news-img-box'>
-                      <img src={urlToImage} alt={author} />
+                      <img src={Image} alt={Source} />
                     </div>
 
                     <div className='todays-text'>
                       <h3>
                         {`${
-                          title.length < 60 ? title : title.substring(0, 60)
+                          Title.length < 70 ? Title : Title.substring(0, 70)
                         }`}
                         ..
                       </h3>
                       <p className='t-text-desc'>
                         {`${
-                          description < 100
-                            ? description
-                            : description.substring(0, 100)
+                          Description < 110
+                            ? Description
+                            : Description.substring(0, 110)
                         }`}
                         ..
                       </p>
@@ -124,7 +130,7 @@ const Breaking = () => {
                         <span className='n-post-time'>1 hours ago </span>
                         <span className='time'>
                           By{' '}
-                          {`${author < 10 ? author : author.substring(0, 10)}`}{' '}
+                          {`${Source < 10 ? Source : Source.substring(0, 10)}`}{' '}
                           | 4min read
                         </span>
                       </p>
