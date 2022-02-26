@@ -64,7 +64,7 @@ const Breaking = () => {
               </div>
             </div>
             <div className='live-img-wrapper'>
-              <img src='./liveImage.svg' alt='' />
+              <img src='./liveImage.svg' alt='logo' />
             </div>
           </article>
           <h4 className='live-topic'>
